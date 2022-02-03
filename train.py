@@ -53,8 +53,8 @@ if __name__ == "__main__":
     tf.random.set_seed(42)
     create_dir("files")
 
-    train_path = "/content/new_data/train"
-    valid_path = "/content/new_data/valid"
+    train_path = "/kaggle/working/new_data/train" 
+    valid_path = "/kaggle/working/new_data/valid"
 
     ## Training
     train_x = sorted(glob(os.path.join(train_path, "image", "*.jpg")))
@@ -68,7 +68,7 @@ if __name__ == "__main__":
     valid_y = sorted(glob(os.path.join(valid_path, "mask", "*.jpg")))
 
     model_path = "files/model.h5"
-    batch_size = 16
+    batch_size = 8
     epochs = 300
     lr = 1e-4
     shape = (192, 256, 3)
